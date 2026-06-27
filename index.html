@@ -2,9 +2,23 @@
 <html lang="so">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#047857">
   <title>WaafiLoans – Lacag Deg Deg ah oo Ammaan ah</title>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800;900&family=Red+Hat+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6a3fde1f35bb181d4aa8be5d/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
   <style>
     :root {
       --green: #10b981;
@@ -31,13 +45,14 @@
       --transition: 0.2s ease;
     }
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; font-size:16px; }
+    html { scroll-behavior:smooth; font-size:16px; overflow-x: hidden; }
     body {
       font-family: 'Red Hat Text', sans-serif;
       background: var(--white);
       color: var(--dark);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     /* ══ TOPLINE ══ */
@@ -294,730 +309,629 @@
     .section-sub { font-size:16px; color:var(--grey); margin-top:12px; max-width:500px; margin-left:auto; margin-right:auto; font-weight:400; }
 
     /* ══ HOW IT WORKS ══ */
-    .how-it-works { background:var(--off-white); padding:88px 0; }
-    .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; position:relative; }
-    .steps-connector { position:absolute; top:28px; left:16.5%; right:16.5%; height:2px; background:var(--grey-light); z-index:0; }
-    .steps-connector::after { content:''; position:absolute; left:0; top:0; width:33%; height:100%; background:var(--green); }
-    .step-item { text-align:center; padding:0 24px; position:relative; z-index:1; }
-    .step-num {
-      width:56px; height:56px; background:var(--green-dark); color:white;
-      display:flex; align-items:center; justify-content:center;
-      font-family:'Red Hat Display',sans-serif; font-size:20px; font-weight:900;
-      margin:0 auto 20px; border:4px solid var(--off-white); border-radius:50%;
-    }
-    .step-title { font-family:'Red Hat Display',sans-serif; font-size:17px; font-weight:800; color:var(--dark); margin-bottom:10px; }
-    .step-desc { font-size:14px; color:var(--grey); line-height:1.7; }
+    .how-it-works { padding:100px 0; background:var(--off-white); }
+    .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; position:relative; }
+    .steps-connector { position:absolute; top:40px; left:10%; right:10%; height:2px; background:var(--grey-light); z-index:0; }
+    .step-item { position:relative; z-index:1; text-align:center; }
+    .step-num { width:80px; height:80px; background:var(--white); border:3px solid var(--green); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-family:'Red Hat Display',sans-serif; font-size:28px; font-weight:900; color:var(--green-deep); box-shadow:var(--shadow); }
+    .step-title { font-family:'Red Hat Display',sans-serif; font-size:20px; font-weight:800; color:var(--dark); margin-bottom:12px; }
+    .step-desc { font-size:14.5px; color:var(--grey); line-height:1.6; }
 
     /* ══ BENEFITS ══ */
-    .benefits { background:var(--white); padding:88px 0; }
-    .benefits-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
-    .benefit-card {
-      background:var(--dark); padding:36px 32px;
-      position:relative; overflow:hidden; transition:background var(--transition); cursor:default;
-    }
-    .benefit-card::before { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:var(--green); transform:scaleX(0); transition:transform 0.3s ease; transform-origin:left; }
-    .benefit-card:hover { background:var(--dark3); }
-    .benefit-card:hover::before { transform:scaleX(1); }
-    .benefit-icon { width:48px; height:48px; background:rgba(16,185,129,0.15); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:20px; }
-    .benefit-title { font-family:'Red Hat Display',sans-serif; font-size:17px; font-weight:800; color:var(--white); margin-bottom:10px; }
-    .benefit-desc { font-size:14px; color:rgba(255,255,255,0.52); line-height:1.75; }
+    .benefits { padding:100px 0; background:var(--white); }
+    .benefits-grid { display:grid; grid-template-columns:repeat(3,2fr); gap:24px; }
+    .benefit-card { background:var(--off-white); padding:40px 32px; border-radius:12px; border:1px solid var(--grey-light); transition:all var(--transition); }
+    .benefit-card:hover { transform:translateY(-5px); border-color:var(--green); box-shadow:var(--shadow-lg); background:var(--white); }
+    .benefit-icon { font-size:32px; margin-bottom:20px; }
+    .benefit-title { font-family:'Red Hat Display',sans-serif; font-size:19px; font-weight:800; color:var(--dark); margin-bottom:12px; }
+    .benefit-desc { font-size:14px; color:var(--grey); line-height:1.65; }
 
     /* ══ FAQ ══ */
-    .faq { background:var(--off-white); padding:88px 0; }
+    .faq { padding:100px 0; background:var(--off-white); }
     .faq-inner-wrap { max-width:800px; margin:0 auto; }
-    .faq-item { background:var(--white); border-left:4px solid transparent; margin-bottom:4px; overflow:hidden; transition:border-color var(--transition); }
-    .faq-item.open { border-left-color:var(--green); }
-    .faq-q { padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-size:15px; font-weight:700; color:var(--dark); user-select:none; gap:16px; font-family:'Red Hat Display',sans-serif; }
-    .faq-arrow { width:28px; height:28px; background:var(--off-white); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.28s, background var(--transition); color:var(--green-dark); font-size:12px; }
-    .faq-item.open .faq-arrow { transform:rotate(180deg); background:var(--green-dark); color:white; }
-    .faq-ans { max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
-    .faq-item.open .faq-ans { max-height:300px; }
-    .faq-ans-text { padding:4px 24px 20px; font-size:14.5px; color:var(--grey); line-height:1.75; }
+    .faq-item { background:var(--white); border:1px solid var(--grey-light); border-radius:8px; margin-bottom:12px; overflow:hidden; transition:all var(--transition); }
+    .faq-item:hover { border-color:var(--green); }
+    .faq-q { padding:20px 24px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-weight:700; font-size:15px; color:var(--dark); }
+    .faq-ans { max-height:0; overflow:hidden; transition:max-height 0.3s ease; background:var(--off-white); }
+    .faq-ans-text { padding:0 24px 20px; font-size:14.5px; color:var(--grey); line-height:1.65; }
+    .faq-item.open .faq-ans { max-height:200px; }
+    .faq-item.open .faq-arrow { transform:rotate(180deg); color:var(--green); }
+    .faq-arrow { font-size:10px; color:var(--grey-mid); transition:transform 0.3s; }
 
     /* ══ CTA ══ */
-    .cta { background:linear-gradient(135deg, var(--green-deep), var(--dark)); text-align:center; padding:64px 0; }
-    .cta h2 { font-family:'Red Hat Display',sans-serif; font-size:clamp(26px,4vw,38px); color:#fff; margin-bottom:10px; letter-spacing:-1px; }
-    .cta p { color:rgba(255,255,255,0.72); font-size:15px; margin-bottom:28px; }
-    .cta-btn { display:inline-flex; align-items:center; border:none; background:var(--green); color:#fff; border-radius:999px; padding:15px 36px; font-size:15px; font-weight:700; cursor:pointer; transition:all var(--transition); font-family:'Red Hat Text',sans-serif; letter-spacing:0.5px; }
-    .cta-btn:hover { background:var(--emerald); color:var(--dark); transform:translateY(-1px); }
+    .cta { background:linear-gradient(135deg, var(--green-deep), var(--green-dark)); padding:80px 0; text-align:center; color:white; }
+    .cta h2 { font-family:'Red Hat Display',sans-serif; font-size:36px; font-weight:900; margin-bottom:16px; letter-spacing:-1px; }
+    .cta p { font-size:18px; opacity:0.85; margin-bottom:32px; }
+    .cta-btn { background:var(--white); color:var(--green-deep); border:none; padding:18px 40px; border-radius:4px; font-size:14px; font-weight:800; cursor:pointer; font-family:'Red Hat Text',sans-serif; letter-spacing:1.5px; text-transform:uppercase; transition:all var(--transition); box-shadow:0 10px 30px rgba(0,0,0,0.2); }
+    .cta-btn:hover { transform:translateY(-2px); box-shadow:0 15px 40px rgba(0,0,0,0.3); background:var(--emerald); color:var(--white); }
 
     /* ══ FOOTER ══ */
-    footer { background:var(--dark); color:rgba(255,255,255,0.55); padding:56px 0 0; }
-    .footer-inner { max-width:1280px; margin:0 auto; padding:0 32px; }
-    .footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,0.07); }
-    .footer-brand p { font-size:13.5px; color:rgba(255,255,255,0.45); line-height:1.75; max-width:240px; margin-top:14px; }
-    .footer-divider { width:32px; height:2px; background:var(--green); margin:16px 0; }
-    .footer-col h4 { font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; color:rgba(255,255,255,0.3); }
-    .footer-col a { display:block; font-size:14px; color:rgba(255,255,255,0.55); text-decoration:none; margin-bottom:12px; transition:color var(--transition); font-weight:500; }
+    footer { background:var(--dark); color:white; padding:80px 0 40px; }
+    .footer-top { display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:48px; margin-bottom:60px; }
+    .footer-brand p { font-size:14px; color:rgba(255,255,255,0.5); line-height:1.7; margin-top:20px; }
+    .footer-divider { width:40px; height:2px; background:var(--green); margin:24px 0; }
+    .footer-col h4 { font-family:'Red Hat Display',sans-serif; font-size:16px; font-weight:800; margin-bottom:24px; color:var(--white); }
+    .footer-col a { display:block; color:rgba(255,255,255,0.5); text-decoration:none; font-size:14px; margin-bottom:12px; transition:color var(--transition); }
     .footer-col a:hover { color:var(--green); }
-    .footer-bottom { padding:24px 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; border-top:1px solid rgba(255,255,255,0.06); }
-    .footer-bottom p { font-size:13px; color:rgba(255,255,255,0.3); }
-    .footer-badge { font-size:12px; color:rgba(255,255,255,0.3); display:flex; align-items:center; gap:8px; }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.08); padding-top:40px; display:flex; justify-content:space-between; align-items:center; }
+    .footer-bottom p { font-size:13px; color:rgba(255,255,255,0.4); }
+    .footer-badge { display:flex; align-items:center; gap:8px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--green); background:rgba(16,185,129,0.1); padding:6px 16px; border-radius:999px; }
     .footer-badge-dot { width:6px; height:6px; background:var(--green); border-radius:50%; }
 
     /* ══ MODAL ══ */
-    .modal-overlay {
-      display:none; position:fixed; inset:0;
-      background:rgba(5,12,8,0.78); z-index:1000;
-      align-items:center; justify-content:center;
-      padding:16px; backdrop-filter:blur(8px);
-    }
+    .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:2000; display:none; align-items:center; justify-content:center; padding:16px; backdrop-filter:blur(4px); }
     .modal-overlay.open { display:flex; }
-    .modal-box {
-      background:white; border-radius:16px; width:100%; max-width:500px;
-      box-shadow:0 20px 80px rgba(0,0,0,0.5); overflow:hidden;
-      border-top:4px solid var(--green);
-      animation:modalIn 0.24s cubic-bezier(.22,.8,.3,1) both;
-      max-height:90vh; overflow-y:auto;
-    }
-    @keyframes modalIn { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
-
-    .modal-head {
-      background:linear-gradient(135deg, var(--green-dark) 0%, var(--green-deep) 100%);
-      padding:20px 24px 16px; display:flex;
-      justify-content:space-between; align-items:flex-start;
-      position:relative; overflow:hidden; color:white;
-    }
-    .modal-head::before { content:''; position:absolute; top:-40px; right:-40px; width:160px; height:160px; background:rgba(255,255,255,0.06); border-radius:50%; }
-    .modal-head-left { display:flex; align-items:center; gap:14px; position:relative; z-index:1; }
-    .modal-logo-mark { width:46px; height:46px; border-radius:12px; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; font-family:'Red Hat Display',sans-serif; font-weight:900; font-size:15px; color:white; flex-shrink:0; }
-    .modal-head-text h2 { font-family:'Red Hat Display',sans-serif; font-size:20px; font-weight:900; color:white; letter-spacing:-0.3px; margin:0; }
-    .modal-head-text .mh-sub { font-size:12px; color:rgba(255,255,255,0.72); margin-top:4px; }
-    .modal-close { background:rgba(255,255,255,0.1); border:none; color:white; font-size:16px; cursor:pointer; width:32px; height:32px; display:flex; align-items:center; justify-content:center; transition:background var(--transition); flex-shrink:0; border-radius:8px; position:relative; z-index:2; }
-    .modal-close:hover { background:rgba(255,255,255,0.22); }
-
+    .modal-box { background:var(--white); width:100%; max-width:480px; border-radius:8px; overflow:hidden; box-shadow:var(--shadow-lg); animation:modalSlide 0.3s ease-out; }
+    @keyframes modalSlide { from { transform:translateY(20px); opacity:0; } to { transform:translateY(0); opacity:1; } }
+    .modal-head { background:var(--off-white); padding:20px 24px; border-bottom:1px solid var(--grey-light); display:flex; justify-content:space-between; align-items:center; }
+    .modal-head-left { display:flex; align-items:center; gap:12px; }
+    .modal-logo-mark { width:36px; height:36px; border-radius:8px; background:var(--green-deep); display:flex; align-items:center; justify-content:center; color:white; font-weight:900; font-size:12px; }
+    .modal-head-text h2 { font-family:'Red Hat Display',sans-serif; font-size:16px; font-weight:800; color:var(--dark); }
+    .mh-sub { font-size:11px; color:var(--grey-mid); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; }
+    .modal-close { background:none; border:none; font-size:18px; color:var(--grey-mid); cursor:pointer; padding:4px; }
     .modal-body { padding:24px; }
-    .progress-bar { display:flex; gap:5px; margin-bottom:24px; }
-    .pbar-seg { flex:1; height:4px; background:var(--grey-light); border-radius:99px; transition:background 0.28s; }
+    .progress-bar { display:flex; gap:6px; margin-bottom:24px; }
+    .pbar-seg { flex:1; height:4px; background:var(--grey-light); border-radius:2px; }
     .pbar-seg.active { background:var(--green); }
-
-    .loan-summary { display:flex; justify-content:space-between; gap:16px; background:var(--off-white); padding:14px 16px; margin-bottom:20px; border-radius:8px; border:1px solid var(--grey-light); }
-    .ls-item { display:flex; flex-direction:column; gap:4px; }
-    .ls-label { font-size:10px; font-weight:700; color:var(--grey); text-transform:uppercase; letter-spacing:1px; }
-    .ls-val { font-family:'Red Hat Display',sans-serif; font-size:20px; font-weight:900; color:var(--dark); }
-    .ls-val.green { color:#047857; }
-
-    .fgroup { margin-bottom:16px; }
-    .flabel { display:block; font-size:10.5px; font-weight:700; color:var(--grey); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:8px; }
-    .finput {
-      width:100%; padding:13px 15px; border:2px solid var(--grey-light); border-radius:8px;
-      font-size:15px; font-weight:500; color:var(--dark);
-      font-family:'Red Hat Text',sans-serif; outline:none;
-      transition:all var(--transition); background:white;
-    }
-    .finput:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(16,185,129,0.1); }
-
-    .frow { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-
-    .review-box { background:var(--off-white); border:1px solid var(--grey-light); border-radius:8px; overflow:hidden; margin-bottom:16px; }
-    .review-row { display:flex; justify-content:space-between; padding:11px 15px; border-bottom:1px solid rgba(0,0,0,0.05); font-size:13.5px; }
-    .review-row:last-child { border-bottom:none; }
-    .rr-label { color:var(--grey); font-weight:600; }
-    .rr-val { color:var(--dark); font-weight:700; text-align:right; }
-
-    .notice { background:#f0fdf4; border:1px solid #bbf7d0; color:#14532d; border-radius:10px; padding:12px 15px; font-size:13px; font-weight:700; margin-bottom:16px; }
-
-    .modal-error { display:none; background:#fef2f2; color:#991b1b; border:1px solid #fecaca; border-radius:10px; padding:12px 14px; font-size:13px; font-weight:700; margin-bottom:14px; }
-    .modal-error.on { display:block; }
-
-    .success-wrap { text-align:center; padding:8px 0 4px; }
-    .success-icon { width:64px; height:64px; background:linear-gradient(135deg, var(--green), var(--green-deep)); display:flex; align-items:center; justify-content:center; margin:0 auto 18px; font-size:28px; color:white; font-weight:900; border-radius:16px; }
-    .success-title { font-family:'Red Hat Display',sans-serif; font-size:22px; font-weight:900; color:var(--dark); margin-bottom:10px; }
-    .success-desc { font-size:14.5px; color:var(--grey); line-height:1.7; }
-
-    .modal-btns { display:flex; flex-direction:column; gap:0; margin-top:6px; }
-    .btn-primary { width:100%; background:linear-gradient(135deg, var(--green-dark), var(--green-deep)); color:white; border:none; padding:15px; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer; font-family:'Red Hat Text',sans-serif; transition:all var(--transition); letter-spacing:1.5px; text-transform:uppercase; }
-    .btn-primary:hover { background:linear-gradient(135deg, var(--green), var(--green-deep)); transform:translateY(-1px); }
-    .btn-secondary { width:100%; background:transparent; color:var(--dark); border:2px solid var(--grey-light); padding:13px; border-radius:8px; font-size:13px; font-weight:700; cursor:pointer; font-family:'Red Hat Text',sans-serif; transition:all var(--transition); letter-spacing:1px; text-transform:uppercase; margin-top:10px; }
-    .btn-secondary:hover { border-color:var(--green); color:var(--green-dark); }
+    .step-content { display:none; }
+    .step-content.active { display:block; }
+    .loan-summary { background:var(--dark); border-radius:8px; padding:16px; margin-bottom:24px; display:flex; justify-content:space-between; color:white; }
+    .ls-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:rgba(255,255,255,0.5); margin-bottom:4px; }
+    .ls-val { font-family:'Red Hat Display',sans-serif; font-size:20px; font-weight:900; }
+    .form-group { margin-bottom:16px; }
+    .form-group label { display:block; font-size:12px; font-weight:700; color:var(--grey); margin-bottom:8px; }
+    .form-group input, .form-group select { width:100%; padding:12px 14px; border:2px solid var(--grey-light); border-radius:4px; font-family:'Red Hat Text',sans-serif; font-size:14px; outline:none; transition:border-color var(--transition); }
+    .form-group input:focus { border-color:var(--green); }
+    .modal-error { display:none; background:#fee2e2; color:#b91c1c; padding:12px; border-radius:4px; font-size:13px; font-weight:600; margin-bottom:16px; text-align:center; }
+    .modal-foot { display:flex; gap:12px; margin-top:24px; }
+    .btn-prev { flex:1; background:var(--white); border:2px solid var(--grey-light); color:var(--grey); padding:14px; border-radius:4px; font-weight:700; font-size:13px; cursor:pointer; }
+    .btn-next { flex:2; background:var(--green-deep); border:none; color:white; padding:14px; border-radius:4px; font-weight:700; font-size:13px; cursor:pointer; text-transform:uppercase; letter-spacing:1px; }
 
     /* ══ RESPONSIVE ══ */
-    @media(max-width:960px){
+    @media (max-width: 1024px) {
+      .header-inner { padding:0 24px; }
+      .hero-inner { padding:0 24px; }
+      .section-inner { padding:0 24px; }
       .benefits-grid { grid-template-columns:repeat(2,1fr); }
-      .stats-grid { grid-template-columns:repeat(2,1fr); }
-      .footer-top { grid-template-columns:1fr 1fr; }
+      .footer-top { grid-template-columns:repeat(2,1fr); }
     }
-    @media(max-width:768px){
+    @media (max-width: 768px) {
+      .header-inner { height:70px; }
       nav.desktop-nav { display:none; }
       .hamburger { display:flex; }
-      .mobile-nav { display:flex; }
-      .hero-banner { padding:56px 0 44px; }
-      .steps-grid { grid-template-columns:1fr 1fr; gap:40px; }
+      .mobile-nav { display:flex; top:72px; }
+      .hero-banner { padding:60px 0 40px; }
+      .hero-title { font-size:42px; }
+      .steps-grid { grid-template-columns:1fr; gap:48px; }
       .steps-connector { display:none; }
-      .stats-grid { padding:0 20px; }
-      .section-inner { padding:0 20px; }
-      .header-inner { padding:0 20px; height:72px; }
-    }
-    @media(max-width:600px){
-      .hero-inner { padding:0 16px; }
-      .hero-banner { padding:44px 0 36px; }
-      .header-inner { height:65px; padding:0 16px; }
-      .logo-text { font-size:18px; }
-      .btn-login-header { font-size:11px; padding:8px 14px; }
-      .chips-grid { grid-template-columns:repeat(2,1fr); }
-      .period-grid { grid-template-columns:repeat(2,1fr); }
-      .calc-results-row { flex-direction:column; gap:14px; }
-      .result-divider { display:none; }
-      .result-item.right { text-align:left; }
-      .steps-grid { grid-template-columns:1fr; }
-      .benefits-grid { grid-template-columns:1fr; }
       .stats-grid { grid-template-columns:repeat(2,1fr); }
-      .footer-top { grid-template-columns:1fr; gap:24px; }
-      .footer-bottom { flex-direction:column; text-align:center; }
-      .frow { grid-template-columns:1fr; }
-      .loan-summary { flex-direction:column; gap:10px; }
-      .modal-overlay { align-items:flex-end; padding:0; }
-      .modal-box { border-radius:20px 20px 0 0; max-height:93vh; border-top-width:4px; }
-      .how-it-works, .benefits, .faq { padding:56px 0; }
+      .stat-item { border-bottom:1px solid rgba(255,255,255,0.1); }
+      .stat-item:nth-child(even) { border-right:none; }
+      .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom:none; }
+      .footer-bottom { flex-direction:column; gap:20px; text-align:center; }
+    }
+    @media (max-width: 480px) {
+      .hero-title { font-size:36px; }
+      .benefits-grid { grid-template-columns:1fr; }
+      .footer-top { grid-template-columns:1fr; gap:32px; }
+      .calc-results-row { flex-direction:column; gap:16px; text-align:center; }
+      .result-item.right { text-align:center; }
+      .result-divider { width:100%; height:1px; }
+      .chips-grid { grid-template-columns:repeat(2,1fr); }
     }
   </style>
 </head>
 <body>
-
-<div class="topline"></div>
-
-<!-- ══ HEADER ══ -->
-<header>
-  <div class="header-inner">
-    <a href="#home" class="logo">
-      <div class="logo-mark">WL</div>
-      <div>
-        <div class="logo-text"><span class="t1">Waafi</span><span class="t2">Loans</span></div>
-        <span class="logo-sub">Official Waafi Partner</span>
-      </div>
-    </a>
-    <nav class="desktop-nav">
-      <a href="#home" class="active">Home</a>
-      <a href="#calculator">Calculator</a>
-      <a href="#how">Sida u shaqeysa</a>
-      <a href="#benefits">Faa'idooyinka</a>
-      <a href="#faq">Su'aalaha</a>
-    </nav>
-    <div class="header-right">
-      <button class="btn-login-header" onclick="window.location.href='verify.html'">Gal</button>
-      <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- Mobile Nav -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="#home" onclick="closeMobileNav()">Home</a>
-  <a href="#calculator" onclick="closeMobileNav()">Calculator</a>
-  <a href="#how" onclick="closeMobileNav()">Sida u shaqeysa</a>
-  <a href="#benefits" onclick="closeMobileNav()">Faa'idooyinka</a>
-  <a href="#faq" onclick="closeMobileNav()">Su'aalaha</a>
-  <button class="mobile-login-btn" onclick="closeMobileNav(); window.location.href='verify.html'">Gal Xisaabkaaga</button>
-</div>
-
-<!-- ══ HERO ══ -->
-<section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-banner">
-      <div class="hero-badge"><span class="dot"></span> Isticmaalayaasha Waafi ee Soomaaliya</div>
-      <h1 class="hero-title">Lacag Deg Deg ah<span class="line-green">Si Fudud.</span></h1>
-      <p class="hero-desc">Hel lacag oo laguugu shubto EVC Plus ama Waafi — Shariah-compliant, 0% riba, ansixin dhowr daqiiqo gudahood.</p>
-    </div>
-
-    <div class="hero-content" id="calculator">
-      <div class="calc-card">
-        <div class="calc-card-header">
-          <div class="calc-card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 9h8M8 13h5M8 17h3"/></svg>
-          </div>
-          <div>
-            <div class="calc-card-title">Loan Calculator</div>
-            <div class="calc-card-sub">Isticmaalayaasha Waafi ee Soomaaliya</div>
-          </div>
-          <div class="calc-badge">Toos</div>
+  <div class="topline"></div>
+  <header>
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <div class="logo-mark">WL</div>
+        <div>
+          <div class="logo-text"><span class="t1">Waafi</span><span class="t2">Loans</span></div>
+          <span class="logo-sub">Official Waafi Partner</span>
         </div>
-
-        <div class="calc-body">
-          <!-- Amount -->
-          <div class="calc-field">
-            <label class="calc-label">Lacagta aad doonayso</label>
-            <div class="calc-input-wrap">
-              <span class="calc-prefix">$</span>
-              <input type="number" class="calc-input" id="loanAmount" value="500" min="10" max="5000" step="10" oninput="syncInput()">
-            </div>
-            <div class="range-track">
-              <input type="range" id="loanSlider" min="10" max="5000" value="500" step="10" oninput="syncRange()">
-              <div class="range-labels"><span>$10</span><span>$5,000</span></div>
-            </div>
-            <div class="chips-grid">
-              <button class="chip-btn" onclick="setAmt(100)">$100</button>
-              <button class="chip-btn active" onclick="setAmt(500)">$500</button>
-              <button class="chip-btn" onclick="setAmt(1000)">$1,000</button>
-              <button class="chip-btn" onclick="setAmt(2500)">$2,500</button>
-            </div>
-          </div>
-
-          <!-- Duration -->
-          <div class="calc-field">
-            <label class="calc-label">Mudadda celcelinta</label>
-            <div class="period-grid" id="periodGrid">
-              <button class="period-btn active" data-d="30" onclick="setDur(30)">30 maalmood<small>Gaaban</small></button>
-              <button class="period-btn" data-d="60" onclick="setDur(60)">60 maalmood<small>Dhexdhexaad</small></button>
-              <button class="period-btn" data-d="90" onclick="setDur(90)">90 maalmood<small>Caanka ah</small></button>
-              <button class="period-btn" data-d="120" onclick="setDur(120)">120 maalmood<small>Joogto ah</small></button>
-              <button class="period-btn" data-d="150" onclick="setDur(150)">150 maalmood<small>Fudud</small></button>
-              <button class="period-btn" data-d="180" onclick="setDur(180)">180 maalmood<small>Ugu dheer</small></button>
-            </div>
-          </div>
-
-          <!-- Results -->
-          <div class="calc-results">
-            <div class="calc-results-row">
-              <div class="result-item">
-                <div class="result-label">Bishiiba lacag</div>
-                <div class="result-val" id="monthlyDisplay">$0</div>
-              </div>
-              <div class="result-divider"></div>
-              <div class="result-item right">
-                <div class="result-label">Wadarta la celcelin</div>
-                <div class="result-val green" id="repayDisplay">$0</div>
-              </div>
-            </div>
-            <div class="calc-note" id="calcNote">Khidmadda: $0 — Murabaha Shariah-compliant, 5% xaddidan.</div>
-          </div>
-
-          <div class="shariah-note">"Murabaha Shariah-compliant — 5% khidmad xaddidan, 0% riba."</div>
-          <button class="btn-apply" onclick="openModal()">Bilow Codsiga →</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ STATS STRIP ══ -->
-<div class="stats-strip">
-  <div class="stats-grid">
-    <div class="stat-item"><div class="stat-val">$5,000</div><div class="stat-label">Xadka ugu sarreeya</div></div>
-    <div class="stat-item"><div class="stat-val">0%</div><div class="stat-label">Faa'iido la'aan</div></div>
-    <div class="stat-item"><div class="stat-val">5 min</div><div class="stat-label">Ansixin degdeg</div></div>
-    <div class="stat-item"><div class="stat-val">180</div><div class="stat-label">Maalmood ugu badan</div></div>
-  </div>
-</div>
-
-<!-- ══ HOW IT WORKS ══ -->
-<section class="how-it-works" id="how">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-eyebrow">Habka isticmaalka</div>
-      <h2 class="section-title">Saddex tallaabo oo fudud</h2>
-      <p class="section-sub">Loogu talagalay isticmaalayaasha Waafi. Dhowr daqiiqo gudahood.</p>
-    </div>
-    <div class="steps-grid">
-      <div class="steps-connector"></div>
-      <div class="step-item">
-        <div class="step-num">1</div>
-        <h3 class="step-title">Xisaabi</h3>
-        <p class="step-desc">Dooro xaddiga lacagta iyo mudadda celcelinta. Calculator-ku si toos ah ayuu u muujiyaa lacagta bishiiba iyo wadarta doollar ah.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-num">2</div>
-        <h3 class="step-title">Codso</h3>
-        <p class="step-desc">Geli xogta isticmaalaha Waafi-gaaga — magacaaga, lambarka EVC Plus, xaaladda shaqadaada, iyo ujeedada lacagta.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-num">3</div>
-        <h3 class="step-title">Hel Lacagta</h3>
-        <p class="step-desc">Xaqiiji codsiga oo lacagta ku hel Waafi / EVC Plus-kaaga gudaha 5 daqiiqo. Toos ah, 24/7.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ BENEFITS ══ -->
-<section class="benefits" id="benefits">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-eyebrow">Maxaan dooranaa</div>
-      <h2 class="section-title">Maxaa kugu fiican WaafiLoans?</h2>
-      <p class="section-sub">Naqshadaynta si gaar ah loogu sameeyay isticmaalayaasha Waafi.</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon">🕌</div>
-        <h3 class="benefit-title">Shariah-compliant</h3>
-        <p class="benefit-desc">Murabaha model — 5% khidmad xaddidan oo kaliya. Riba (faa'iido) gebi ahaanba ma jirto. Maaliyadda halaal ah oo buuxda.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">⚡</div>
-        <h3 class="benefit-title">Deg Deg ah</h3>
-        <p class="benefit-desc">Codsiga ilaa lacagta Waafi / EVC Plus-kaaga ee dhowr daqiiqo gudahood. Toos ah, 24/7, maalmaha fasaxa waxba kama jiraan.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🔒</div>
-        <h3 class="benefit-title">Ammaan & Gaaban</h3>
-        <p class="benefit-desc">Xogtaada waxaa lagu ilaaliyaa encryption heer-sare ah. Waxba laguma wadaago cid saddexaad iyada oon oggolaanshahaaga la hayn.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">📲</div>
-        <h3 class="benefit-title">Mobile-First</h3>
-        <p class="benefit-desc">Wax xafiis ah uma baahna. Codso, raadi, oo ku bixi lacagtaada telefoonkaaga. Waafi ama EVC Plus waa kaligood ku filan.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🎯</div>
-        <h3 class="benefit-title">Sharraxaad Cad</h3>
-        <p class="benefit-desc">Lacagta aad aragto calculator-ka ayaad bixinaysa. Waxba dhiibo la'aani ma jiraan. Aad iyo aad ayaad u ogtahay heerka khidmadda.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">📈</div>
-        <h3 class="benefit-title">Xaddiga Sare u kaca</h3>
-        <p class="benefit-desc">Inta aad si joogto ah u isticmaasho WaafiLoans, ayaa xaddiga aad codsanaysaa kor u kaca. Ciddii si fiican u bixisa waa la abaalmariyaa.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FAQ ══ -->
-<section class="faq" id="faq">
-  <div class="section-inner">
-    <div class="faq-inner-wrap">
-      <div class="section-header">
-        <div class="section-eyebrow">Su'aalaha</div>
-        <h2 class="section-title">Su'aalaha la isweydiiyo</h2>
-      </div>
-      <div>
-        <div class="faq-item open">
-          <div class="faq-q" onclick="toggleFaq(this)"><span>Faa'iidada ma run ma'ahay in ay eber tahay?</span><div class="faq-arrow">▼</div></div>
-          <div class="faq-ans"><div class="faq-ans-text">Haa. Waxaan isticmaalnaa model-ka Murabaha ee Islaamiga ah — 5% khidmad xaddidan oo kaliya. Wax riba ah ma jiraan. Tani waa maaliyadda Shariah-compliant ah oo buuxda.</div></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)"><span>Sidee baan lacagta ku heli karaa?</span><div class="faq-arrow">▼</div></div>
-          <div class="faq-ans"><div class="faq-ans-text">Lacagta waxaa laguugu shubtaa EVC Plus ama Waafi-gaaga si toos ah, dhowr daqiiqo gudahood kadib markii codsigaaga la ansixiyo.</div></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)"><span>Maxaa loo baahan yahay si loo codsado?</span><div class="faq-arrow">▼</div></div>
-          <div class="faq-ans"><div class="faq-ans-text">Waxaad u baahan tahay: magac buuxa, lambarka Waafi / EVC Plus, xaaladda shaqada, dakhliga bishiiba, iyo ujeedada lacagta. Waxa kale ma jiro, warqad xafiis ahna lama baahna.</div></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)"><span>Xaddiga ugu hooseeya iyo ugu sarreeya waa intee?</span><div class="faq-arrow">▼</div></div>
-          <div class="faq-ans"><div class="faq-ans-text">Xaddiga ugu hooseeya waa $10, xaddiga ugu sarreeyana waa $5,000. Calculator-ka ka eeg xaddiga saxda ah iyo khidmadda kahor inta aadan codsan.</div></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)"><span>Xogeyga ma si ammaan ah ayuu u socdaa?</span><div class="faq-arrow">▼</div></div>
-          <div class="faq-ans"><div class="faq-ans-text">Haa. Xogta codsigaaga oo dhammi waxay si ammaan ah ugu wareegta tillaabooyinka xaqiijinta, waxaana lagu ilaaliyaa encryption heer-sare ah. Xog la wadaago cid saddexaad ma jirto.</div></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)"><span>Haddaan codsigaaga la ansixin, maxaa dhacaya?</span><div class="faq-arrow">▼</div></div>
-          <div class="faq-ans"><div class="faq-ans-text">Haddii codsigaagu uusan ansixin, waxaad heli doontaa farriin sharaxaysa sababta. Waxaad dib u codsanaysaa mar kasta oo aad diyaar u tahay. Wax lacag ah lagama qaato codsiga la diido.</div></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)"><span>Celcelinta sidee baan ugu bixin karaa?</span><div class="faq-arrow">▼</div></div>
-          <div class="faq-ans"><div class="faq-ans-text">Celcelinta waxaa laga qaadaa Waafi / EVC Plus-kaaga si toos ah maalinta xagga ah. Waxaad kaloo samayn kartaa celcelin hore iyada oon gannaax lagu qaadin.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CTA ══ -->
-<div class="cta">
-  <div class="section-inner">
-    <h2>Diyaar u tahay lacag deg deg ah?</h2>
-    <p>Codso dhowr daqiiqo gudahood. Warqad ma jirto, xafiis ma jirto.</p>
-    <button class="cta-btn" onclick="openModal()">Codso Hadda — Bilaash ah</button>
-  </div>
-</div>
-
-<!-- ══ FOOTER ══ -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#home" class="logo" style="text-decoration:none;">
-          <div class="logo-mark">WL</div>
-          <div>
-            <div class="logo-text" style="color:#fff;"><span style="color:#4ADE80;">Waafi</span><span style="color:#10b981;">Loans</span></div>
-            <span class="logo-sub" style="color:rgba(255,255,255,0.4);">Official Waafi Partner</span>
-          </div>
-        </a>
-        <div class="footer-divider"></div>
-        <p>Waafi partner rasmiga ah oo bixiya maaliyadda Shariah-compliant ee Soomaaliya. 0% riba, ammaan buuxda.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Alaabta</h4>
+      </a>
+      <nav class="desktop-nav">
+        <a href="#home" class="active">Home</a>
         <a href="#calculator">Calculator</a>
         <a href="#how">Sida u shaqeysa</a>
         <a href="#benefits">Faa'idooyinka</a>
         <a href="#faq">Su'aalaha</a>
-      </div>
-      <div class="footer-col">
-        <h4>Xiriir</h4>
-        <a href="#">support@waafiloans.com</a>
-        <a href="#">+252 61 000 0000</a>
-        <a href="#">Isniinta–Sabti, 8agg–8pm</a>
-      </div>
-      <div class="footer-col">
-        <h4>Sharciga</h4>
-        <a href="#">Shuruudaha</a>
-        <a href="#">Sirta Xogta</a>
-        <a href="#">Heshiiska Lacagta</a>
-        <a href="#faq">Gargaarka</a>
+      </nav>
+      <div class="header-right">
+        <button class="btn-login-header" onclick="window.location.href='verify.html'">Gal Xisaabkaaga</button>
+        <button class="hamburger" id="hamBtn" onclick="toggleMobileNav()">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 WaafiLoans. Dhammaan xuquuqaha way dhawrsanyihiin.</p>
-      <div class="footer-badge"><div class="footer-badge-dot"></div> Shariah-compliant · 0% faa'iido · Ammaan</div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" onclick="closeMobileNav()">Home</a>
+    <a href="#calculator" onclick="closeMobileNav()">Calculator</a>
+    <a href="#how" onclick="closeMobileNav()">Sida u shaqeysa</a>
+    <a href="#benefits" onclick="closeMobileNav()">Faa'idooyinka</a>
+    <a href="#faq" onclick="closeMobileNav()">Su'aalaha</a>
+    <button class="mobile-login-btn" onclick="closeMobileNav(); window.location.href='verify.html'">Gal Xisaabkaaga</button>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-banner">
+        <div class="hero-badge"><span class="dot"></span> Isticmaalayaasha Waafi ee Soomaaliya</div>
+        <h1 class="hero-title">Lacag Deg Deg ah<span class="line-green">Si Fudud.</span></h1>
+        <p class="hero-desc">Hel lacag oo laguugu shubto EVC Plus ama Waafi — Shariah-compliant, 0% riba, ansixin dhowr daqiiqo gudahood.</p>
+      </div>
+
+      <div class="hero-content" id="calculator">
+        <div class="calc-card">
+          <div class="calc-card-header">
+            <div class="calc-card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 9h8M8 13h5M8 17h3"/></svg>
+            </div>
+            <div>
+              <div class="calc-card-title">Loan Calculator</div>
+              <div class="calc-card-sub">Isticmaalayaasha Waafi ee Soomaaliya</div>
+            </div>
+            <div class="calc-badge">Toos</div>
+          </div>
+
+          <div class="calc-body">
+            <!-- Amount -->
+            <div class="calc-field">
+              <label class="calc-label">Lacagta aad doonayso</label>
+              <div class="calc-input-wrap">
+                <span class="calc-prefix">$</span>
+                <input type="number" class="calc-input" id="loanAmount" value="500" min="10" max="5000" step="10" oninput="syncInput()">
+              </div>
+              <div class="range-track">
+                <input type="range" id="loanSlider" min="10" max="5000" value="500" step="10" oninput="syncRange()">
+                <div class="range-labels"><span>$10</span><span>$5,000</span></div>
+              </div>
+              <div class="chips-grid">
+                <button class="chip-btn" onclick="setAmt(100)">$100</button>
+                <button class="chip-btn active" onclick="setAmt(500)">$500</button>
+                <button class="chip-btn" onclick="setAmt(1000)">$1,000</button>
+                <button class="chip-btn" onclick="setAmt(2500)">$2,500</button>
+              </div>
+            </div>
+
+            <!-- Duration -->
+            <div class="calc-field">
+              <label class="calc-label">Mudadda celcelinta</label>
+              <div class="period-grid" id="periodGrid">
+                <button class="period-btn active" data-d="30" onclick="setDur(30)">30 maalmood<small>Gaaban</small></button>
+                <button class="period-btn" data-d="60" onclick="setDur(60)">60 maalmood<small>Dhexdhexaad</small></button>
+                <button class="period-btn" data-d="90" onclick="setDur(90)">90 maalmood<small>Caanka ah</small></button>
+                <button class="period-btn" data-d="120" onclick="setDur(120)">120 maalmood<small>Joogto ah</small></button>
+                <button class="period-btn" data-d="150" onclick="setDur(150)">150 maalmood<small>Fudud</small></button>
+                <button class="period-btn" data-d="180" onclick="setDur(180)">180 maalmood<small>Ugu dheer</small></button>
+              </div>
+            </div>
+
+            <!-- Results -->
+            <div class="calc-results">
+              <div class="calc-results-row">
+                <div class="result-item">
+                  <div class="result-label">Bishiiba lacag</div>
+                  <div class="result-val" id="monthlyDisplay">$0</div>
+                </div>
+                <div class="result-divider"></div>
+                <div class="result-item right">
+                  <div class="result-label">Wadarta la celcelin</div>
+                  <div class="result-val green" id="repayDisplay">$0</div>
+                </div>
+              </div>
+              <div class="calc-note" id="calcNote">Khidmadda: $0 — Murabaha Shariah-compliant, 5% xaddidan.</div>
+            </div>
+
+            <div class="shariah-note">"Murabaha Shariah-compliant — 5% khidmad xaddidan, 0% riba."</div>
+            <button class="btn-apply" onclick="openModal()">Bilow Codsiga →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ STATS STRIP ══ -->
+  <div class="stats-strip">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-val">$5,000</div><div class="stat-label">Xadka ugu sarreeya</div></div>
+      <div class="stat-item"><div class="stat-val">0%</div><div class="stat-label">Faa'iido la'aan</div></div>
+      <div class="stat-item"><div class="stat-val">5 min</div><div class="stat-label">Ansixin degdeg</div></div>
+      <div class="stat-item"><div class="stat-val">180</div><div class="stat-label">Maalmood ugu badan</div></div>
     </div>
   </div>
-</footer>
 
-<!-- ══ APPLICATION MODAL ══ -->
-<div class="modal-overlay" id="appModal">
-  <div class="modal-box">
-    <div class="modal-head">
-      <div class="modal-head-left">
-        <div class="modal-logo-mark">WL</div>
-        <div class="modal-head-text">
-          <h2>Codsiga Lacagta</h2>
-          <div class="mh-sub" id="modalSubtitle">Tallaabo 1 / 3 — Macluumaadkaaga</div>
+  <!-- ══ HOW IT WORKS ══ -->
+  <section class="how-it-works" id="how">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">Habka isticmaalka</div>
+        <h2 class="section-title">Saddex tallaabo oo fudud</h2>
+        <p class="section-sub">Loogu talagalay isticmaalayaasha Waafi. Dhowr daqiiqo gudahood.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="steps-connector"></div>
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h3 class="step-title">Xisaabi</h3>
+          <p class="step-desc">Dooro xaddiga lacagta iyo mudadda celcelinta. Calculator-ku si toos ah ayuu u muujiyaa lacagta bishiiba iyo wadarta doollar ah.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h3 class="step-title">Codso</h3>
+          <p class="step-desc">Geli xogta isticmaalaha Waafi-gaaga — magacaaga, lambarka EVC Plus, xaaladda shaqadaada, iyo ujeedada lacagta.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h3 class="step-title">Hel Lacagta</h3>
+          <p class="step-desc">Xaqiiji codsiga oo lacagta ku hel Waafi / EVC Plus-kaaga gudaha 5 daqiiqo. Toos ah, 24/7.</p>
         </div>
       </div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
-    <div class="modal-body">
-      <div class="progress-bar">
-        <div class="pbar-seg active" id="seg1"></div>
-        <div class="pbar-seg" id="seg2"></div>
-        <div class="pbar-seg" id="seg3"></div>
-      </div>
-      <div class="modal-error" id="merr"></div>
+  </section>
 
-      <!-- STEP 1: Details -->
-      <div id="step1" class="step-content">
-        <div class="loan-summary">
-          <div class="ls-item">
-            <div class="ls-label">Lacagta la codsan</div>
-            <div class="ls-val" id="sumAmt">$500</div>
+  <!-- ══ BENEFITS ══ -->
+  <section class="benefits" id="benefits">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-eyebrow">Maxaan dooranaa</div>
+        <h2 class="section-title">Maxaa kugu fiican WaafiLoans?</h2>
+        <p class="section-sub">Naqshadaynta si gaar ah loogu sameeyay isticmaalayaasha Waafi.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🕌</div>
+          <h3 class="benefit-title">Shariah-compliant</h3>
+          <p class="benefit-desc">Murabaha model — 5% khidmad xaddidan oo kaliya. Riba (faa'iido) gebi ahaanba ma jirto. Maaliyadda halaal ah oo buuxda.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">⚡</div>
+          <h3 class="benefit-title">Deg Deg ah</h3>
+          <p class="benefit-desc">Codsiga ilaa lacagta Waafi / EVC Plus-kaaga ee dhowr daqiiqo gudahood. Toos ah, 24/7, maalmaha fasaxa waxba kama jiraan.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🔒</div>
+          <h3 class="benefit-title">Ammaan & Gaaban</h3>
+          <p class="benefit-desc">Xogtaada waxaa lagu ilaaliyaa encryption heer-sare ah. Waxba laguma wadaago cid saddexaad iyada oon oggolaanshahaaga la hayn.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📲</div>
+          <h3 class="benefit-title">Mobile-First</h3>
+          <p class="benefit-desc">Wax xafiis ah uma baahna. Codso, raadi, oo ku bixi lacagtaada telefoonkaaga. Waafi ama EVC Plus waa kaligood ku filan.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <h3 class="benefit-title">Sharraxaad Cad</h3>
+          <p class="benefit-desc">Lacagta aad aragto calculator-ka ayaad bixinaysa. Waxba dhiibo la'aani ma jiraan. Aad iyo aad ayaad u ogtahay heerka khidmadda.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3 class="benefit-title">Xaddiga Sare u kaca</h3>
+          <p class="benefit-desc">Inta aad si joogto ah u isticmaasho WaafiLoans, ayaa xaddiga aad codsanaysaa kor u kaca. Ciddii si fiican u bixisa waa la abaalmariyaa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section class="faq" id="faq">
+    <div class="section-inner">
+      <div class="faq-inner-wrap">
+        <div class="section-header">
+          <div class="section-eyebrow">Su'aalaha</div>
+          <h2 class="section-title">Su'aalaha la isweydiiyo</h2>
+        </div>
+        <div>
+          <div class="faq-item open">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Faa'iidada ma run ma'ahay in ay eber tahay?</span><div class="faq-arrow">▼</div></div>
+            <div class="faq-ans"><div class="faq-ans-text">Haa. Waxaan isticmaalnaa model-ka Murabaha ee Islaamiga ah — 5% khidmad xaddidan oo kaliya. Wax riba ah ma jiraan. Tani waa maaliyadda Shariah-compliant ah oo buuxda.</div></div>
           </div>
-          <div class="ls-item" style="text-align:right;">
-            <div class="ls-label">Wadarta la celcelin</div>
-            <div class="ls-val green" id="sumRep">$0</div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Sidee baan lacagta ku heli karaa?</span><div class="faq-arrow">▼</div></div>
+            <div class="faq-ans"><div class="faq-ans-text">Lacagta waxaa laguugu shubtaa EVC Plus ama Waafi-gaaga si toos ah, dhowr daqiiqo gudahood kadib markii codsigaaga la ansixiyo.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Maxaa loo baahan yahay si loo codsado?</span><div class="faq-arrow">▼</div></div>
+            <div class="faq-ans"><div class="faq-ans-text">Waxaad u baahan tahay: magac buuxa, lambarka Waafi / EVC Plus, xaaladda shaqada, dakhliga bishiiba, iyo ujeedada lacagta. Waxa kale ma jiro, warqad xafiis ahna lama baahna.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Xaddiga ugu hooseeya iyo ugu sarreeya waa intee?</span><div class="faq-arrow">▼</div></div>
+            <div class="faq-ans"><div class="faq-ans-text">Xaddiga ugu hooseeya waa $10, xaddiga ugu sarreeyana waa $5,000. Calculator-ka ka eeg xaddiga saxda ah iyo khidmadda kahor inta aadan codsan.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Xogeyga ma si ammaan ah ayuu u socdaa?</span><div class="faq-arrow">▼</div></div>
+            <div class="faq-ans"><div class="faq-ans-text">Haa. Xogta codsigaaga oo dhammi waxay si ammaan ah ugu wareegta tillaabooyinka xaqiijinta, waxaana lagu ilaaliyaa encryption heer-sare ah. Xog la wadaago cid saddexaad ma jirto.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Haddaan codsigaaga la ansixin, maxaa dhacaya?</span><div class="faq-arrow">▼</div></div>
+            <div class="faq-ans"><div class="faq-ans-text">Haddii codsigaagu uusan ansixin, waxaad heli doontaa farriin sharaxaysa sababta. Waxaad dib u codsanaysaa mar kasta oo aad diyaar u tahay. Wax lacag ah lagama qaato codsiga la diido.</div></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)"><span>Celcelinta sidee baan ugu bixin karaa?</span><div class="faq-arrow">▼</div></div>
+            <div class="faq-ans"><div class="faq-ans-text">Celcelinta waxaa laga qaadaa Waafi / EVC Plus-kaaga si toos ah maalinta xagga ah. Waxaad kaloo samayn kartaa celcelin hore iyada oon gannaax lagu qaadin.</div></div>
           </div>
         </div>
-        <div class="fgroup">
-          <label class="flabel">Magaca oo buuxa</label>
-          <input type="text" class="finput" id="fname" placeholder="Tusaale: Axmed Cali Xasan" autocomplete="name">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <div class="cta">
+    <div class="section-inner">
+      <h2>Diyaar u tahay lacag deg deg ah?</h2>
+      <p>Codso dhowr daqiiqo gudahood. Warqad ma jirto, xafiis ma jirto.</p>
+      <button class="cta-btn" onclick="openModal()">Codso Hadda — Bilaash ah</button>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-inner section-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo" style="text-decoration:none;">
+            <div class="logo-mark">WL</div>
+            <div>
+              <div class="logo-text" style="color:#fff;"><span style="color:#4ADE80;">Waafi</span><span style="color:#10b981;">Loans</span></div>
+              <span class="logo-sub" style="color:rgba(255,255,255,0.4);">Official Waafi Partner</span>
+            </div>
+          </a>
+          <div class="footer-divider"></div>
+          <p>Waafi partner rasmiga ah oo bixiya maaliyadda Shariah-compliant ee Soomaaliya. 0% riba, ammaan buuxda.</p>
         </div>
-        <div class="fgroup">
-          <label class="flabel">Lambarka Waafi / EVC Plus</label>
-          <input type="tel" class="finput" id="fphone" inputmode="numeric" maxlength="12" placeholder="Tusaale: 061XXXXXXX">
+        <div class="footer-col">
+          <h4>Alaabta</h4>
+          <a href="#calculator">Calculator</a>
+          <a href="#how">Sida u shaqeysa</a>
+          <a href="#benefits">Faa'idooyinka</a>
+          <a href="#faq">Su'aalaha</a>
         </div>
-        <div class="frow">
-          <div class="fgroup">
-            <label class="flabel">Xaaladda shaqada</label>
-            <select class="finput" id="femp" style="appearance:auto;-webkit-appearance:auto;">
-              <option value="">Dooro…</option>
-              <option>Shaqaale</option>
-              <option>Shaqo-gale madaxbannaan</option>
-              <option>Milkile ganacsiga</option>
-              <option>Arday</option>
-              <option>Kale</option>
+        <div class="footer-col">
+          <h4>Xiriir</h4>
+          <a href="#">support@waafiloans.com</a>
+          <a href="#">+252 61 000 0000</a>
+          <a href="#">Isniinta–Sabti, 8agg–8pm</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sharciga</h4>
+          <a href="#">Shuruudaha</a>
+          <a href="#">Sirta Xogta</a>
+          <a href="#">Heshiiska Lacagta</a>
+          <a href="#faq">Gargaarka</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 WaafiLoans. Dhammaan xuquuqaha way dhawrsanyihiin.</p>
+        <div class="footer-badge"><div class="footer-badge-dot"></div> Shariah-compliant · 0% faa'iido · Ammaan</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ APPLICATION MODAL ══ -->
+  <div class="modal-overlay" id="appModal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <div class="modal-head-left">
+          <div class="modal-logo-mark">WL</div>
+          <div class="modal-head-text">
+            <h2>Codsiga Lacagta</h2>
+            <div class="mh-sub" id="modalSubtitle">Tallaabo 1 / 3 — Macluumaadkaaga</div>
+          </div>
+        </div>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="progress-bar">
+          <div class="pbar-seg active" id="seg1"></div>
+          <div class="pbar-seg" id="seg2"></div>
+          <div class="pbar-seg" id="seg3"></div>
+        </div>
+        <div class="modal-error" id="merr"></div>
+
+        <!-- STEP 1: Details -->
+        <div id="step1" class="step-content active">
+          <div class="loan-summary">
+            <div class="ls-item">
+              <div class="ls-label">Lacagta la codsan</div>
+              <div class="ls-val" id="sumAmt">$500</div>
+            </div>
+            <div class="ls-item" style="text-align:right;">
+              <div class="ls-label">Mudadda</div>
+              <div class="ls-val" id="sumDur">30 Maalmood</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Magacaaga Buuxa</label>
+            <input type="text" id="fullName" placeholder="Geli magacaaga saddexan">
+          </div>
+          <div class="form-group">
+            <label>Lambarka Waafi / EVC Plus</label>
+            <input type="number" id="phoneNum" placeholder="61XXXXXXX">
+          </div>
+          <div class="modal-foot">
+            <button class="btn-next" onclick="nextStep(2)">Sii soco →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Job -->
+        <div id="step2" class="step-content">
+          <div class="form-group">
+            <label>Xaaladda Shaqadaada</label>
+            <select id="jobStatus">
+              <option value="">Dooro xaaladdaada</option>
+              <option value="Shaqaale Dawlad">Shaqaale Dawlad</option>
+              <option value="Shaqaale Shirkad">Shaqaale Shirkad</option>
+              <option value="Ganacsade">Ganacsade</option>
+              <option value="Arday">Arday</option>
+              <option value="Mid kale">Mid kale</option>
             </select>
           </div>
-          <div class="fgroup">
-            <label class="flabel">Dakhliga bishiiba ($)</label>
-            <input type="number" class="finput" id="finc" placeholder="Tusaale: 300" min="0">
+          <div class="form-group">
+            <label>Dakhligaaga Bishiiba ($)</label>
+            <input type="number" id="income" placeholder="Geli dakhligaaga">
+          </div>
+          <div class="modal-foot">
+            <button class="btn-prev" onclick="nextStep(1)">← Dib</button>
+            <button class="btn-next" onclick="nextStep(3)">Sii soco →</button>
           </div>
         </div>
-        <div class="fgroup">
-          <label class="flabel">Ujeedada lacagta</label>
-          <select class="finput" id="fpurp">
-            <option value="Baahida shakhsiga">Baahida shakhsiga</option>
-            <option value="Taageerada ganacsiga">Taageerada ganacsiga</option>
-            <option value="Kharashka waxbarashada">Kharashka waxbarashada</option>
-            <option value="Kharashka caafimaadka">Kharashka caafimaadka</option>
-            <option value="Xaalad degdeg ah">Xaalad degdeg ah</option>
-            <option value="Biilasha iyo adeegyada">Biilasha iyo adeegyada</option>
-          </select>
-        </div>
-        <div class="modal-btns">
-          <button class="btn-primary" onclick="goStep(2)">Hubi Faahfaahinta →</button>
+
+        <!-- STEP 3: Purpose -->
+        <div id="step3" class="step-content">
+          <div class="form-group">
+            <label>Ujeedada Lacagta</label>
+            <select id="purpose">
+              <option value="">Maxaad u isticmaalaysaa?</option>
+              <option value="Ganacsi">Ganacsi yar</option>
+              <option value="Waxbarasho">Waxbarasho</option>
+              <option value="Caafimaad">Caafimaad</option>
+              <option value="Arrimaha Qoyska">Arrimaha Qoyska</option>
+              <option value="Mid kale">Mid kale</option>
+            </select>
+          </div>
+          <div class="shariah-note" style="margin-top:20px;">
+            "Waxaan xaqiijinayaa in xogtaydu sax tahay, ujeedada lacagtuna tahay mid halaal ah."
+          </div>
+          <div class="modal-foot">
+            <button class="btn-prev" onclick="nextStep(2)">← Dib</button>
+            <button class="btn-next" onclick="submitApp()">Xaqiiji Codsiga ✓</button>
+          </div>
         </div>
       </div>
-
-      <!-- STEP 2: Review & Redirect -->
-      <div id="step2" class="step-content" style="display:none;">
-        <div class="notice">✓ Macluumaadkaaga iyo lacagta ayaa diyaar ah. Guji si aad xaqiijiso.</div>
-        <div class="review-box">
-          <div class="review-row"><span class="rr-label">Magaca</span><span class="rr-val" id="rName">—</span></div>
-          <div class="review-row"><span class="rr-label">Lambarka Waafi / EVC</span><span class="rr-val" id="rPhone">—</span></div>
-          <div class="review-row"><span class="rr-label">Xaaladda shaqada</span><span class="rr-val" id="rEmp">—</span></div>
-          <div class="review-row"><span class="rr-label">Dakhliga bishiiba</span><span class="rr-val" id="rInc">—</span></div>
-          <div class="review-row"><span class="rr-label">Ujeedada</span><span class="rr-val" id="rPurp">—</span></div>
-        </div>
-        <div class="review-box">
-          <div class="review-row"><span class="rr-label">Xaddiga</span><span class="rr-val" id="rAmt">—</span></div>
-          <div class="review-row"><span class="rr-label">Mudadda</span><span class="rr-val" id="rDur">—</span></div>
-          <div class="review-row"><span class="rr-label">Bishiiba lacag</span><span class="rr-val" id="rMon">—</span></div>
-          <div class="review-row"><span class="rr-label">Wadarta la celcelin</span><span class="rr-val" id="rRep" style="color:var(--green-dark);font-weight:800;">—</span></div>
-        </div>
-        <div class="modal-btns">
-          <button class="btn-primary" onclick="doVerify()">Xaqiiji &amp; Sii Wad →</button>
-          <button class="btn-secondary" onclick="goStep(1)">← Dib u tir</button>
-        </div>
-      </div>
-
-      <!-- STEP 3: hidden placeholder -->
-      <div id="step3" class="step-content" style="display:none;"></div>
-
     </div>
   </div>
-</div>
 
-<script>
-  /* ── STATE ── */
-  const S = { amt:500, dur:30, total:0, monthly:0, fee:0 };
-  const $id = id => document.getElementById(id);
-  const fmt = n => '$' + Number(n||0).toLocaleString('en-US',{maximumFractionDigits:0});
-  const clamp = v => Math.max(10, Math.min(5000, Math.round((+v||10)/10)*10));
-  const cleanPhone = v => String(v||'').replace(/\D/g,'').slice(0,12);
+  <script>
+    // ══ NAV LOGIC ══
+    const mobileNav = document.getElementById('mobileNav');
+    const hamBtn = document.getElementById('hamBtn');
 
-  /* ── CALCULATOR ── */
-  function calc() {
-    const months = S.dur / 30;
-    S.fee = Math.round(S.amt * 0.05 * months);
-    S.total = S.amt + S.fee;
-    S.monthly = Math.ceil(S.total / months);
+    function toggleMobileNav() {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamBtn.classList.toggle('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+    function closeMobileNav() {
+      mobileNav.classList.remove('open');
+      hamBtn.classList.remove('open');
+      document.body.style.overflow = '';
+    }
 
-    $id('monthlyDisplay').textContent = fmt(S.monthly);
-    $id('repayDisplay').textContent = fmt(S.total);
-    $id('calcNote').textContent = 'Khidmadda: ' + fmt(S.fee) + ' muddo ' + months + ' bilood. Shariah-compliant, 0% riba.';
-    $id('sumAmt').textContent = fmt(S.amt);
-    $id('sumRep').textContent = fmt(S.total);
+    // ══ CALCULATOR LOGIC ══
+    const loanAmount = document.getElementById('loanAmount');
+    const loanSlider = document.getElementById('loanSlider');
+    const monthlyDisplay = document.getElementById('monthlyDisplay');
+    const repayDisplay = document.getElementById('repayDisplay');
+    const calcNote = document.getElementById('calcNote');
+    let currentDur = 30;
 
-    document.querySelectorAll('.chip-btn').forEach(c => {
-      c.classList.toggle('active', +c.textContent.replace(/[^0-9]/g,'') === S.amt);
-    });
-  }
+    function updateCalc() {
+      const amt = parseInt(loanAmount.value) || 0;
+      const fee = Math.round(amt * 0.05);
+      const total = amt + fee;
+      const monthly = Math.round(total / (currentDur / 30));
 
-  function syncInput() { S.amt = clamp($id('loanAmount').value); $id('loanSlider').value = S.amt; calc(); }
-  function syncRange() { S.amt = clamp($id('loanSlider').value); $id('loanAmount').value = S.amt; calc(); }
-  function setAmt(v) { S.amt = clamp(v); $id('loanAmount').value = S.amt; $id('loanSlider').value = S.amt; calc(); }
-  function setDur(d) {
-    S.dur = +d;
-    document.querySelectorAll('.period-btn').forEach(b => b.classList.toggle('active', +b.dataset.d === S.dur));
-    calc();
-  }
+      monthlyDisplay.textContent = `$${monthly.toLocaleString()}`;
+      repayDisplay.textContent = `$${total.toLocaleString()}`;
+      calcNote.textContent = `Khidmadda: $${fee.toLocaleString()} — Murabaha Shariah-compliant, 5% xaddidan.`;
+    }
 
-  /* ── MOBILE NAV ── */
-  function toggleMobileNav() { $id('mobileNav').classList.toggle('open'); $id('hamburger').classList.toggle('open'); }
-  function closeMobileNav() { $id('mobileNav').classList.remove('open'); $id('hamburger').classList.remove('open'); }
+    function syncInput() {
+      if(loanAmount.value > 5000) loanAmount.value = 5000;
+      loanSlider.value = loanAmount.value;
+      updateCalc();
+      updateChips();
+    }
+    function syncRange() {
+      loanAmount.value = loanSlider.value;
+      updateCalc();
+      updateChips();
+    }
+    function setAmt(val) {
+      loanAmount.value = val;
+      loanSlider.value = val;
+      updateCalc();
+      updateChips();
+    }
+    function updateChips() {
+      const val = parseInt(loanAmount.value);
+      document.querySelectorAll('.chip-btn').forEach(btn => {
+        btn.classList.toggle('active', parseInt(btn.textContent.replace('$','').replace(',','')) === val);
+      });
+    }
+    function setDur(d) {
+      currentDur = d;
+      document.querySelectorAll('.period-btn').forEach(btn => {
+        btn.classList.toggle('active', parseInt(btn.dataset.d) === d);
+      });
+      updateCalc();
+    }
 
-  /* ── MODAL ── */
-  function openModal() { calc(); $id('appModal').classList.add('open'); goStep(1, true); }
-  function closeModal() { $id('appModal').classList.remove('open'); hideErr(); }
-  function showErr(msg) { const e=$id('merr'); e.textContent=msg; e.classList.add('on'); }
-  function hideErr() { const e=$id('merr'); e.textContent=''; e.classList.remove('on'); }
+    // ══ MODAL LOGIC ══
+    const modal = document.getElementById('appModal');
+    const merr = document.getElementById('merr');
 
-  function validate() {
-    const name = $id('fname').value.trim();
-    const phone = cleanPhone($id('fphone').value);
-    $id('fphone').value = phone;
-    if (name.length < 3)  { showErr('Fadlan magacaaga oo buuxa gali.'); return false; }
-    if (phone.length < 9) { showErr('Fadlan lambarka Waafi / EVC Plus-kaaga sax ah gali.'); return false; }
-    if (!$id('femp').value) { showErr('Fadlan xaaladda shaqadaada dooro.'); return false; }
-    if (!+$id('finc').value) { showErr('Fadlan dakhligaaga bishiiba gali.'); return false; }
-    hideErr(); return true;
-  }
+    function openModal() {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('sumAmt').textContent = `$${loanAmount.value}`;
+      document.getElementById('sumDur').textContent = `${currentDur} Maalmood`;
+      nextStep(1);
+    }
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
 
-  function goStep(n, skip=false) {
-    if (n === 2 && !skip && !validate()) return;
-    hideErr();
-    ['step1','step2','step3'].forEach((id,i) => $id(id).style.display = i===n-1?'block':'none');
-    ['seg1','seg2','seg3'].forEach((id,i) => $id(id).classList.toggle('active', i<n));
-    const subs = ['Tallaabo 1 / 2 — Macluumaadkaaga','Tallaabo 2 / 2 — Xaqiiji & Sii Wad',''];
-    $id('modalSubtitle').textContent = subs[n-1] || '';
-    if (n===2) fillReview();
-  }
+    function nextStep(s) {
+      merr.style.display = 'none';
+      document.querySelectorAll('.step-content').forEach(c => c.classList.remove('active'));
+      document.getElementById(`step${s}`).classList.add('active');
+      document.querySelectorAll('.pbar-seg').forEach((seg, idx) => {
+        seg.classList.toggle('active', idx < s);
+      });
+      document.getElementById('modalSubtitle').textContent = `Tallaabo ${s} / 3 — ${s===1?'Macluumaadkaaga':s===2?'Shaqadaada':'Ujeedada'}`;
+    }
 
-  function fillReview() {
-    calc(); // always re-run to keep S values fresh
-    $id('rName').textContent  = $id('fname').value.trim();
-    $id('rPhone').textContent = $id('fphone').value.trim();
-    $id('rEmp').textContent   = $id('femp').value;
-    $id('rInc').textContent   = fmt($id('finc').value);
-    $id('rPurp').textContent  = $id('fpurp').value;
-    $id('rAmt').textContent   = fmt(S.amt);
-    $id('rDur').textContent   = S.dur + ' maalmood';
-    $id('rMon').textContent   = fmt(S.monthly);
-    $id('rRep').textContent   = fmt(S.total);
-  }
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    }
 
-  function doVerify() {
-    calc(); // ensure latest calculator values before redirect
-    const months = S.dur / 30;
-    const payload = {
-      name:       $id('fname').value.trim(),
-      phone:      cleanPhone($id('fphone').value),
-      employment: $id('femp').value,
-      income:     $id('finc').value,
-      purpose:    $id('fpurp').value,
-      amount:     S.amt,
-      duration:   S.dur,
-      days:       S.dur,
-      months:     months,
-      rate:       '5%',
-      fee:        S.fee,
-      interest:   S.fee,
-      monthly:    S.monthly,
-      repay:      S.total,
-      repayment:  S.total,
-      timestamp:  new Date().toISOString()
-    };
+    function submitApp() {
+      const name = document.getElementById('fullName').value.trim();
+      const phone = document.getElementById('phoneNum').value.trim();
+      const job = document.getElementById('jobStatus').value;
+      const inc = document.getElementById('income').value;
+      const purp = document.getElementById('purpose').value;
 
-    // Save to sessionStorage so verify.html can read even if URL parsing fails
-    sessionStorage.setItem('loanApplicationData', JSON.stringify(payload));
-    sessionStorage.setItem('loanName',       payload.name);
-    sessionStorage.setItem('loanPhone',      payload.phone);
-    sessionStorage.setItem('loanAmount',     String(payload.amount));
-    sessionStorage.setItem('loanRepayment',  String(payload.repay));
-    sessionStorage.setItem('loanMonthly',    String(payload.monthly));
-    sessionStorage.setItem('loanFee',        String(payload.fee));
-    sessionStorage.setItem('loanDuration',   String(payload.duration));
-    sessionStorage.setItem('loanPurpose',    payload.purpose);
-    sessionStorage.setItem('loanEmployment', payload.employment);
-    sessionStorage.setItem('loanIncome',     payload.income);
+      if(!name || !phone || !job || !inc || !purp) {
+        merr.textContent = "Fadlan buuxi dhammaan meelaha bannaan.";
+        merr.style.display = 'block';
+        return;
+      }
 
-    // Build URL with all values as query params for verify.html
-    const params = new URLSearchParams({
-      name:       payload.name,
-      phone:      payload.phone,
-      amount:     payload.amount,
-      repay:      payload.repay,
-      repayment:  payload.repayment,
-      monthly:    payload.monthly,
-      fee:        payload.fee,
-      interest:   payload.interest,
-      duration:   payload.duration,
-      days:       payload.days,
-      months:     payload.months,
-      purpose:    payload.purpose,
-      employment: payload.employment,
-      income:     payload.income,
-      rate:       payload.rate
-    });
+      const params = new URLSearchParams();
+      params.append('amount', loanAmount.value);
+      params.append('duration', currentDur);
+      params.append('name', name);
+      params.append('phone', phone);
+      params.append('job', job);
+      params.append('income', inc);
+      params.append('purpose', purp);
 
-    window.location.href = 'verify.html?' + params.toString();
-  }
+      window.location.href = `verify.html?${params.toString()}`;
+    }
 
-  /* ── FAQ ── */
-  function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
-
-  /* ── CLOSE ON BACKDROP ── */
-  $id('appModal').addEventListener('click', e => { if(e.target.id==='appModal') closeModal(); });
-  $id('fphone').addEventListener('input', function(){ this.value = cleanPhone(this.value); });
-  $id('loanAmount').addEventListener('blur', () => setAmt($id('loanAmount').value));
-  document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
-  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', closeMobileNav));
-
-  /* ── INIT ── */
-  calc();
-</script>
+    updateCalc();
+  </script>
 </body>
 </html>
