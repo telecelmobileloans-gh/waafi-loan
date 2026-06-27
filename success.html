@@ -316,7 +316,7 @@
                     </div>
                     <div class="summary-row">
                         <span class="summary-label">Loan Amount</span>
-                        <span class="summary-value amount" id="dispAmount">GHS 0.00</span>
+                        <span class="summary-value amount" id="dispAmount">USD 0.00</span>
                     </div>
                     <div class="summary-row">
                         <span class="summary-label">Status</span>
@@ -370,7 +370,7 @@
         const params = new URLSearchParams(window.location.search);
         const amount = params.get('amount') || params.get('loan_amount') || '0';
         if (amount !== '0') {
-            document.getElementById('dispAmount').textContent = `GHS ${parseInt(amount).toLocaleString()}.00`;
+            document.getElementById('dispAmount').textContent = `USD ${parseInt(amount).toLocaleString()}.00`;
         }
     </script>
 </body>
